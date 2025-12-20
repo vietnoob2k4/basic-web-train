@@ -18,6 +18,10 @@
     position: relative;
 }
 
+
+.header__navbar-item--has-notify:hover .header__notify{
+    display: block;
+}
 .header__navbar-item--has-qr:hover .header__qr{
     display: block;
 }
@@ -120,4 +124,124 @@ animation: fadeIn ease-in 0.3s;
 }
 .header__qr-link:last-child{
     margin-right: 11px;
+}
+
+
+
+
+.header__notify{
+ position: absolute;
+ top: 100%;
+ width: 404px;
+ background-color: #ffffff;
+ right: 0;
+ border: 1px solid #c9c9c9;
+ cursor: default;
+ transform-origin: 90% top  ;
+ animation: headerNotifyGrowth ease-in 0.2s;
+ display: none;
+ margin-top: 13px;
+ will-change: opacity, transform;
+
+}
+.header__notify::before{
+    content: "";
+    border-width: 20px 27px;
+    border: 20px solid ;
+    border-color: transparent transparent #ffffff transparent;
+    position: absolute;
+    right: 4px;
+    top: -30px;
+}
+
+.header__notify::after{
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -16px;
+    height: 20px;
+    width: 90px;
+
+}
+@keyframes headerNotifyGrowth {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.header__notify-header{
+height: 40px;
+background-color: var(--white-color);
+
+}
+.header__notify-header h3 {
+    color: #666;
+    margin: 0 0 0 12px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 40px;
+    cursor: text;
+}
+.header__notify-list{
+    padding-left: 0;
+    list-style: none;
+}
+
+.header__notify-item{
+    display: flex;
+}
+.header__notify-item:hover{
+    background-color: #aaaaaa;
+}
+
+.header__notify-item--viewed{
+    background-color: var(--primary-color-rgba);
+
+}
+.header__notify-link{
+    padding: 12px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    text-decoration: none;
+}
+.header__notify-img{
+    width: 48px;
+    object-fit: contain;
+
+}
+.header__notify-info{
+    margin-left: 12px;
+    display : flex;
+    flex-direction: column;
+}
+.header__notify-name{
+    display: block;
+color: var(--black-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+}
+.header__notify-descript{
+    display: block;
+    font-size: 1.6rem;
+    color: #666;
+}
+
+.header__notify-footer{
+   display: flex;
+   
+
+}
+.header__notify-footer-btn{
+    text-decoration: none;
+    color: var(--text-color);
+       margin: auto;
+font-size: 1.4rem;
+font-weight: 400;
+       padding: 8px 48px;
 }

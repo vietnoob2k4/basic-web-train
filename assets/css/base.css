@@ -2,7 +2,8 @@
     --white-color: #ffffff;
     --black-color: #000000;
     --text-color: #333;
-
+    --primary-color: #ee9fa3;
+    --primary-color-rgba: rgba(253, 167, 171, 0.904);
 }
 *{
     box-sizing: inherit;
