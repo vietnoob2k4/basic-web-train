@@ -5,6 +5,9 @@
     --primary-color: #f01c26;
     --primary-color-rgba: rgba(253, 167, 171, 0.904);
     --border-color: #e6e6e6;
+    --navbar-height: 34px;
+    --header-height: 150px;
+--header-with-search-height: calc(var(--header-height) - var(--navbar-height));
 }
 *{
     box-sizing: inherit;
@@ -42,6 +45,14 @@ html{
 }
 
 
+@keyframes growth{
+    from{
+        transform: scale(var(--growth-from));
+    }
+    to{
+        transform: scale(var(--growth-to));
+    }
+}
 
 
 
@@ -51,7 +62,7 @@ html{
      display: flex;
     justify-content: center;
     align-items: center;
-    
+    animation: fadeIn linear 0.3s;
 }
 
 .modal__overlay {
@@ -64,12 +75,15 @@ html{
 }
 
 .modal__body {
-    padding: 24px;
+    --growth-from: 0.7;
+    --growth-to: 1;
+    padding: 0px;
     background-color: var(--white-color);
     margin: auto;
     position: relative;
     z-index: 1;
     border-radius: 5px;
+    animation: growth linear 0.1s;
 }
 
 
