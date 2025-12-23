@@ -34,6 +34,10 @@ html{
     display: flex;
     flex-wrap: wrap;
 }
+.grid__column-2 {
+    width: 20%;
+    
+}
 
 @keyframes fadeIn {
     from {
