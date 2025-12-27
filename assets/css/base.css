@@ -35,13 +35,24 @@ html{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+    margin-left:-5px ;
+    margin-right: -5px;
 }
 .grid__column-2 {
     width: calc((100% / 12) * 2);
-    
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.grid__column-2-4 {
+    width: 20%;
+    padding-left: 5px;
+    padding-right: 5px;
+   box-sizing: border-box;
 }
 .grid__column-10 {
     width: calc((100% / 12) * 9.9);
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 @keyframes fadeIn {
@@ -188,4 +199,85 @@ align-items: center;
 }
 .select-input__item{
     margin: 5px 0 0 0;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 50px;
+    margin-bottom:30px ;
+}
+.pagination__item{
+    margin: 0 4px;
+}
+.pagination-item__link{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 42px;
+    height: 32px;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 2px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 2px;
+}
+.pagination-item__icon{
+    font-size: 1.6rem;
+}
+
+.footer{
+    border-top: 4px solid var(--primary-color);
+    padding-top:12px;
+}
+.footer-heading{
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+.footer-item__link a 
+{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    padding: 2px 0;
+    display: block;
+}
+.footer-list{
+    padding-left: 0;
+    list-style: none;
+}
+.footer-item__link:hover a{
+    color: var(--primary-color-rgba);
+}
+
+
+.footer__download{
+    display: flex;
+}
+.footer__download-pr{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border: 1px solid var(--border-color);
+}
+.footer__download-apps{
+flex: 1;
+margin-left: 16px;
+}
+.footer__download-apps-img{
+    margin-left: 16px;
+}
+.footer__download-app{
+    height: 20px;
+    object-fit: contain;
 }
