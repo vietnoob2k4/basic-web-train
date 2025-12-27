@@ -30,13 +30,18 @@ html{
     width: 100%;
 }
 
-.grid_row {
+.grid__row {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .grid__column-2 {
-    width: 20%;
+    width: calc((100% / 12) * 2);
     
+}
+.grid__column-10 {
+    width: calc((100% / 12) * 9.9);
 }
 
 @keyframes fadeIn {
@@ -102,7 +107,7 @@ html{
     padding: 0 8px;
     cursor: pointer;
 color: var(--text-color);
-display: flex;
+display: inline-flex;
 justify-content: center;
 align-items: center;
 
@@ -127,4 +132,60 @@ align-items: center;
     height: 32px;
     font-size: 12px;
 
+}
+
+.select-input{
+    padding: 0 12px;
+    height: 34px;
+    min-width: 200px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display:flex ;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+}
+.select-input_label{
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+.select-input_icon{
+    font-size: 1.8rem;
+    color: var(--text-color);
+    position: relative;
+    top: 1px;
+    
+}
+.select-input__list{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25px;
+  border-radius: 2px;
+  background-color: var(--white-color);
+    padding: 8px 16px;
+    list-style: none;
+    display: none;
+}
+
+.select-input__link{
+    font-size: 1.4rem;
+    color: var(--text-color);
+    padding: 4px 0;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    
+}
+
+.select-input__link:hover{
+    color: var(--primary-color-rgba);
+}
+
+.select-input:hover .select-input__list{
+    display: block;
+}
+.select-input__item{
+    margin: 5px 0 0 0;
 }
